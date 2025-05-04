@@ -1,0 +1,12 @@
+# 브라우저 요청 순서
+브라우저 요청: /jy-struts-loc/HelloStruts.action
+   ↓
+FilterDispatcher (web.xml)
+   ↓
+struts.xml 에서 HelloStruts → HelloStruts.java
+   ↓
+execute() → "success" 리턴
+   ↓
+/HelloStruts_Result.jsp 페이지로 이동
+   ↓
+브라우저에 결과 출력
