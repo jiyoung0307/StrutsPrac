@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="com.mytest.action01" extends="struts-default">
+		<action name="HelloStruts" class="com.mytest.action01.HelloStruts">
+			<result name="success">/HelloStruts_Result.jsp</result>
+		</action>
+	</package>
+	<package name="com.mytest.action02" extends="struts-default">
+		<action name="StrutsJDBC" class="com.mytest.action02.StrutsJDBC">
+			<result name="success">/StrutsJDBC_Result.jsp</result>
+		</action>
+	</package>
+</struts>
