@@ -4,9 +4,9 @@ import com.opensymphony.xwork2.Action;
 import java.sql.*;
 
 public class StrutsJDBC implements Action{
-    String url = "jdbc:mysql://localhost:3308/s2study";
-    String username = "root";
-    String password = "1111";
+    String url = "jdbc:mysql://struts_prac:3308/s2study";
+    String username = "struts_prac";
+    String password = "ubisso132!";
     String query = "INSERT INTO test VALUE(?, ?, ?)";
     private String message;
 	public String getMessage() {
@@ -34,7 +34,7 @@ public class StrutsJDBC implements Action{
 	    }catch(Exception e){
 	    	System.out.println("드라이버 로딩 오류: " + e.getMessage());
 	    }
-	    message = "테이블 행 등록 완료. HeidiSQL에서 확인해주세요.";
+	    message = "테이블 행 등록 완료. MySQL에서 확인해주세요.";
 	    return SUCCESS;
 	}
 }
