@@ -4,10 +4,10 @@ import com.opensymphony.xwork2.Action;
 import java.sql.*;
 
 public class StrutsJDBC implements Action{
-    String url = "jdbc:mysql://struts_prac:3308/s2study";
+	String url = "jdbc:mysql://localhost:3306/s2study?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8";
     String username = "struts_prac";
     String password = "ubisso132!";
-    String query = "INSERT INTO test VALUE(?, ?, ?)";
+    String query = "INSERT INTO test VALUES(?, ?, ?)";
     private String message;
 	public String getMessage() {
 		return message;
@@ -21,6 +21,7 @@ public class StrutsJDBC implements Action{
 		    Class.forName("com.mysql.jdbc.Driver");
 		}catch(ClassNotFoundException e) {
 			System.out.println("드라이버 로딩 실패: " + e.getMessage());
+			e.printStackTrace(); // 이걸 꼭 추가해야 콘솔에 진짜 오류 원인이 나옵니다
 		}
 	    try{
 	      conn = DriverManager.getConnection(url, username, password);
